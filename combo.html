@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-08-25 Sat 18:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<style>pre.src {background-color: #303030; color: #e5e5e5;}</style>
+<style>pre.src {background-color: #303030; color: #e5e5e5;}</style>
+<style>pre.src {background-color: #303030; color: #e5e5e5;}</style>
+<style>pre.src {background-color: #303030; color: #e5e5e5;}</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge52d0fc">1. Automatically Water House Plants!</a>
+<ul>
+<li><a href="#org4a2b7bd">1.1. Basic Idea</a></li>
+<li><a href="#org630185d">1.2. Wiring Diagram</a></li>
+<li><a href="#orgc1bae41">1.3. Code Example</a></li>
+</ul>
+</li>
+<li><a href="#org5c55d34">2. Bright Light Alerts from your Pi!</a>
+<ul>
+<li><a href="#orgfa084af">2.1. Uses</a></li>
+<li><a href="#org696b2db">2.2. Wiring Diagram</a></li>
+<li><a href="#org0f4d5e5">2.3. Example Code</a></li>
+</ul>
+</li>
+<li><a href="#org10017e6">3. Create Spooky Action at a Distance with a Maglock</a>
+<ul>
+<li><a href="#orgab70603">3.1. Wiring Diagram</a></li>
+<li><a href="#org16ec758">3.2. Code Example</a></li>
+</ul>
+</li>
+<li><a href="#orgf473eb1">4. Test your Reflexes with this simple Carnival Game!</a>
+<ul>
+<li><a href="#org08aa812">4.1. Gameplay</a></li>
+<li><a href="#orgc3d02b8">4.2. Wiring Diagram</a></li>
+<li><a href="#org4c130b3">4.3. Code Example</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge52d0fc" class="outline-2">
+<h2 id="orge52d0fc"><span class="section-number-2">1</span> Automatically Water House Plants!</h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="water.gif" alt="water.gif" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a2b7bd" class="outline-3">
+<h3 id="org4a2b7bd"><span class="section-number-3">1.1</span> Basic Idea</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Monitor the moisture level of the soil with a hygrometer, then at a determined level, activate the pump for a certain number of seconds
+</p>
+</div>
+</div>
+<div id="outline-container-org630185d" class="outline-3">
+<h3 id="org630185d"><span class="section-number-3">1.2</span> Wiring Diagram</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<div class="figure">
+<p><img src="water.png" alt="water.png" />
+</p>
+</div>
+
+<p>
+<b>Pump Wiring</b>
+</p>
+<ol class="org-ol">
+<li>Wire the 12v power through a digtal output to control the pump</li>
+<li>Hook the ground directly to to supply</li>
+</ol>
+
+<div class="note">
+<p>
+Electric motors create inductive loads, so a flyback diode is recommended
+</p>
+
+</div>
+
+<p>
+<b>Hygrometer Wiring</b>
+</p>
+<ol class="org-ol">
+<li>3.3v comes from the expansion header</li>
+<li>GND can either go to the expansion header, or the analog input (-)</li>
+<li>The signal wire goes to the analog input (+)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc1bae41" class="outline-3">
+<h3 id="orgc1bae41"><span class="section-number-3">1.3</span> Code Example</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+This code simply turns the pump on
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #b4fa70;">import</span> RPi.GPIO <span style="color: #b4fa70;">as</span> gpio
+<span style="color: #b4fa70;">from</span> time <span style="color: #b4fa70;">import</span> sleep, clock
+<span style="color: #b4fa70;">import</span> sys
+
+<span style="color: #73d216;">#  </span><span style="color: #73d216;">USE: python auto_water.py N, where N is the number of seconds to water</span>
+<span style="color: #73d216;">#  </span><span style="color: #73d216;">sys.argv[0] is the name of the script</span>
+<span style="color: #fcaf3e;">pump_duration</span> = <span style="color: #e090d7;">float</span>(sys.argv[1])
+<span style="color: #fcaf3e;">PUMP_PIN</span> = 12 
+
+<span style="color: #b4fa70;">try</span>:
+    gpio.setmode(gpio.BCM)
+    gpio.setup(PUMP_PIN, gpio.OUT, initial=gpio.LOW)
+
+    <span style="color: #fcaf3e;">start_time</span> = clock()
+    gpio.output(PUMP_PIN, gpio.HIGH)
+    <span style="color: #b4fa70;">while</span> clock() &lt; start_time + pump_duration:
+        <span style="color: #b4fa70;">pass</span>
+    gpio.output(PUMP_PIN, gpio.LOW)
+
+<span style="color: #b4fa70;">finally</span>:
+    gpio.cleanup()
+
+</pre>
+</div>
+
+
+<div class="hint">
+<p>
+To get a single analog reading, try this script:
+</p>
+
+<p>
+<a href="https://github.com/MatterOfTechnologies/PiLC/blob/master/Useful%20Code/Python/single_mcp3004_read.py">https://github.com/MatterOfTechnologies/PiLC/blob/master/Useful Code/Python/single_mcp3004_read.py</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5c55d34" class="outline-2">
+<h2 id="org5c55d34"><span class="section-number-2">2</span> Bright Light Alerts from your Pi!</h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="light.gif" alt="light.gif" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa084af" class="outline-3">
+<h3 id="orgfa084af"><span class="section-number-3">2.1</span> Uses</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+<b>Flash when you get an email</b>
+</p>
+
+<p>
+You could poll your email server for changes
+</p>
+<ul class="org-ul">
+<li>Gmail API: <a href="https://developers.google.com/gmail/api/guides/">https://developers.google.com/gmail/api/guides/</a></li>
+</ul>
+
+<p>
+<b>Indicate high CPU load</b>
+</p>
+
+<ul class="org-ul">
+<li><a href="https://linoxide.com/monitoring-2/10-tools-monitor-cpu-performance-usage-linux-command-line/">https://linoxide.com/monitoring-2/10-tools-monitor-cpu-performance-usage-linux-command-line/</a></li>
+</ul>
+
+<p>
+<b>Show attempted SSH logins</b>
+</p>
+
+<p>
+Try looking for changes in the SSH logs
+</p>
+<ul class="org-ul">
+<li>/var/log/auth.log</li>
+</ul>
+
+<p>
+<b>Weather updates</b>
+</p>
+
+<p>
+Try openweathermap.org for a certain amount of free data (with account)
+</p>
+<ul class="org-ul">
+<li><a href="https://openweathermap.org/current">https://openweathermap.org/current</a></li>
+</ul>
+
+<p>
+<b>Notify when you've been mentioned in a tweet</b>
+</p>
+
+<p>
+Twitter API
+</p>
+<ul class="org-ul">
+<li><a href="https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview">https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/overview</a></li>
+</ul>
+
+<p>
+<b>Start a race</b>
+</p>
+
+<p>
+A simple GREEN RED YELLOW BEEP!!!
+</p>
+
+<p>
+<b>Tell your household to be quiet, you are recording</b>
+</p>
+
+<p>
+Turn that red light on
+</p>
+
+<p>
+<b>Play redlight/greenlight with your cousins</b>
+</p>
+
+<p>
+Make the red and green times random so the kiddos keep guessing
+</p>
+</div>
+</div>
+
+<div id="outline-container-org696b2db" class="outline-3">
+<h3 id="org696b2db"><span class="section-number-3">2.2</span> Wiring Diagram</h3>
+<div class="outline-text-3" id="text-2-2">
+
+<div class="figure">
+<p><img src="light.png" alt="light.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>+24v comes from the power supply</li>
+<li>It goes to the COM of a joined relay</li>
+<li>A jumper supplies the +24v to another COM, allowing 4 different switches</li>
+<li>The colored wires from the light connect to the outputs for the joined relays</li>
+<li><p>
+The grey wire connects to the GND of the power supply
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Red Wire</td>
+<td class="org-left">Red Light</td>
+</tr>
+
+<tr>
+<td class="org-left">Yellow Wire</td>
+<td class="org-left">Yellow Light</td>
+</tr>
+
+<tr>
+<td class="org-left">Green Wire</td>
+<td class="org-left">Green Light</td>
+</tr>
+
+<tr>
+<td class="org-left">Purple Wire</td>
+<td class="org-left">Purple Light</td>
+</tr>
+
+<tr>
+<td class="org-left">Grey Wire</td>
+<td class="org-left">Collective Grounds</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0f4d5e5" class="outline-3">
+<h3 id="org0f4d5e5"><span class="section-number-3">2.3</span> Example Code</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+This is what you see in the GIF above
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #b4fa70;">import</span> RPi.GPIO <span style="color: #b4fa70;">as</span> GPIO
+<span style="color: #b4fa70;">from</span> time <span style="color: #b4fa70;">import</span> sleep
+
+GPIO.setmode(GPIO.BCM)
+<span style="color: #fcaf3e;">BUZZER</span>, <span style="color: #fcaf3e;">RED</span>, <span style="color: #fcaf3e;">YELLOW</span>, <span style="color: #fcaf3e;">GREEN</span> = 5, 20, 21, 17
+<span style="color: #fcaf3e;">OUTPUT_CHANNELS</span> = [BUZZER, RED, YELLOW, GREEN]
+
+<span style="color: #b4fa70;">for</span> channel <span style="color: #b4fa70;">in</span> OUTPUT_CHANNELS:
+        GPIO.setup(channel, GPIO.OUT)
+
+<span style="color: #b4fa70;">try</span>:
+        <span style="color: #fcaf3e;">turn_on</span> = <span style="color: #e9b2e3;">False</span>
+        <span style="color: #b4fa70;">while</span> <span style="color: #e9b2e3;">True</span>:
+                <span style="color: #fcaf3e;">turn_on</span> = <span style="color: #b4fa70;">not</span> turn_on
+                <span style="color: #b4fa70;">for</span> channel <span style="color: #b4fa70;">in</span> OUTPUT_CHANNELS[1:]:  <span style="color: #73d216;"># </span><span style="color: #73d216;">I don't necessarily need to hear the buzzer</span>
+                        GPIO.output(channel, turn_on)
+                        sleep(1)
+                sleep(2)
+
+<span style="color: #b4fa70;">finally</span>:
+        GPIO.cleanup(OUTPUT_CHANNELS)
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org10017e6" class="outline-2">
+<h2 id="org10017e6"><span class="section-number-2">3</span> Create Spooky Action at a Distance with a Maglock</h2>
+<div class="outline-text-2" id="text-3">
+
+<div class="figure">
+<p><img src="mag.gif" alt="mag.gif" />
+</p>
+</div>
+
+<p>
+Maglocks are cool electromagnetic devices for locking doors and drawers or dropping secret items
+</p>
+
+<p>
+The one shown above can hold <b>130 lbs</b> at a modest 12v, 150 mA!
+</p>
+</div>
+
+<div id="outline-container-orgab70603" class="outline-3">
+<h3 id="orgab70603"><span class="section-number-3">3.1</span> Wiring Diagram</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<div class="figure">
+<p><img src="mag.png" alt="mag.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>+12v comes from the power supply</li>
+<li>Then it goes through a digital output to switch the maglock</li>
+</ol>
+
+<div class="note">
+<p>
+Maglocks create inductive loads, so a flyback diode is recommended
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org16ec758" class="outline-3">
+<h3 id="org16ec758"><span class="section-number-3">3.2</span> Code Example</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #b4fa70;">import</span> RPi.GPIO <span style="color: #b4fa70;">as</span> gpio
+<span style="color: #b4fa70;">from</span> time <span style="color: #b4fa70;">import</span> sleep
+
+<span style="color: #fcaf3e;">MAG_PIN</span> = 12
+<span style="color: #fcaf3e;">ANSWER</span> = <span style="color: #e9b96e;">'the secret message'</span>
+
+<span style="color: #b4fa70;">try</span>:
+    gpio.setmode(gpio.BCM)
+    gpio.setup(MAG_PIN, gpio.OUT, initial=gpio.HIGH)
+
+    <span style="color: #fcaf3e;">correct_code</span> = <span style="color: #e9b2e3;">False</span>
+    <span style="color: #b4fa70;">while</span> <span style="color: #b4fa70;">not</span> correct_code:
+        <span style="color: #fcaf3e;">guess</span> = <span style="color: #e090d7;">raw_input</span>(<span style="color: #e9b96e;">'Type the secret message to open the lock\n\tGuess: '</span>)
+        <span style="color: #fcaf3e;">correct_code</span> = guess == ANSWER
+    gpio.output(MAG_PIN, gpio.LOW)
+
+<span style="color: #b4fa70;">finally</span>:
+    gpio.cleanup()
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf473eb1" class="outline-2">
+<h2 id="orgf473eb1"><span class="section-number-2">4</span> Test your Reflexes with this simple Carnival Game!</h2>
+<div class="outline-text-2" id="text-4">
+
+<div class="figure">
+<p><img src="reflexes.gif" alt="reflexes.gif" />
+</p>
+</div>
+</div>
+<div id="outline-container-org08aa812" class="outline-3">
+<h3 id="org08aa812"><span class="section-number-3">4.1</span> Gameplay</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Saddle up li'l partner and test your speed with this Reflex-O-Meter!
+</p>
+
+<p>
+<i>Are you quick as a snake or slow as a hog?</i>
+</p>
+
+
+<p>
+<b>How to Play</b>
+</p>
+<ol class="org-ol">
+<li>Tie one hand behind your back</li>
+<li>Press the start button and steel your gaze on the big button</li>
+</ol>
+
+<div class="warning">
+<p>
+Don't let your nerves get the better of you, keep your hand put until you see the light turn on!
+</p>
+
+</div>
+
+<ol class="org-ol">
+<li>When that yeller light turns on, slap it <b>quick</b>!</li>
+<li>Reckon you done good if'n your score is faster than 0.5 seconds</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc3d02b8" class="outline-3">
+<h3 id="orgc3d02b8"><span class="section-number-3">4.2</span> Wiring Diagram</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<div class="figure">
+<p><img src="reflexes.png" alt="reflexes.png" />
+</p>
+</div>
+<ol class="org-ol">
+<li>+12v comes from the power supply</li>
+<li>12v is split with a wire nut between the two switches and a digital output</li>
+<li>The digital output switches the yellow button light</li>
+<li>Both buttons are normally open, pressing them allows current through two digital inputs</li>
+<li>The negatives are collected at another wire nut</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org4c130b3" class="outline-3">
+<h3 id="org4c130b3"><span class="section-number-3">4.3</span> Code Example</h3>
+<div class="outline-text-3" id="text-4-3">
+<div class="org-src-container">
+<pre class="src src-python">
+<span style="color: #b4fa70;">import</span> RPi.GPIO <span style="color: #b4fa70;">as</span> gpio
+<span style="color: #b4fa70;">from</span> time <span style="color: #b4fa70;">import</span> sleep, clock
+<span style="color: #b4fa70;">from</span> random <span style="color: #b4fa70;">import</span> randint
+
+
+<span style="color: #73d216;"># </span><span style="color: #73d216;">[Start button, reflex button]</span>
+<span style="color: #fcaf3e;">digins</span> = [19, 16]
+<span style="color: #fcaf3e;">digouts</span> = [12]
+<span style="color: #fcaf3e;">result</span> = 0
+
+
+<span style="color: #73d216;">### </span><span style="color: #73d216;">State Functions ###</span>
+
+<span style="color: #b4fa70;">def</span> <span style="color: #fce94f;">standby</span>():
+    <span style="color: #e9b96e;">'''</span>
+<span style="color: #e9b96e;">    Wait for the game to begin!</span>
+<span style="color: #e9b96e;">    '''</span>
+
+    <span style="color: #73d216;"># </span><span style="color: #73d216;">gpio.LOW means button pressed because inputs have pull-up resistors</span>
+    <span style="color: #b4fa70;">if</span> gpio.<span style="color: #e090d7;">input</span>(digins[0]) == gpio.LOW:
+        <span style="color: #b4fa70;">return</span> <span style="color: #e9b96e;">'game'</span>
+    <span style="color: #b4fa70;">else</span>:
+        <span style="color: #b4fa70;">return</span> <span style="color: #e9b96e;">'standby'</span>
+
+
+<span style="color: #b4fa70;">def</span> <span style="color: #fce94f;">game</span>():
+    <span style="color: #e9b96e;">'''</span>
+<span style="color: #e9b96e;">    The main event</span>
+<span style="color: #e9b96e;">    '''</span>
+    <span style="color: #b4fa70;">global</span> result
+    <span style="color: #fcaf3e;">false_start</span> = <span style="color: #e9b2e3;">False</span>
+
+    <span style="color: #73d216;"># </span><span style="color: #73d216;">Add 1 to 6 seconds to the current clock time to randomize the game</span>
+    <span style="color: #fcaf3e;">wait_time</span> = clock() + randint(1, 6)
+
+    <span style="color: #73d216;"># </span><span style="color: #73d216;">Wait for the clock to run out, watch for false starts</span>
+    <span style="color: #b4fa70;">while</span> <span style="color: #b4fa70;">not</span> false_start <span style="color: #b4fa70;">and</span> clock() &lt; wait_time:
+        <span style="color: #fcaf3e;">false_start</span> = gpio.<span style="color: #e090d7;">input</span>(digins[0]) == gpio.HIGH
+    <span style="color: #b4fa70;">if</span> <span style="color: #b4fa70;">not</span> false_start:
+
+        <span style="color: #73d216;"># </span><span style="color: #73d216;">Turn on the LEDs</span>
+        gpio.output(digouts, gpio.HIGH)
+        <span style="color: #fcaf3e;">start_time</span> = clock()
+        <span style="color: #b4fa70;">while</span> gpio.<span style="color: #e090d7;">input</span>(digins[1]) == gpio.HIGH:
+            <span style="color: #b4fa70;">pass</span>  <span style="color: #73d216;"># </span><span style="color: #73d216;">wait until it is pressed</span>
+
+        <span style="color: #73d216;"># </span><span style="color: #73d216;">The time it took is the current clock time minus the start time</span>
+        <span style="color: #fcaf3e;">result</span> = clock() - start_time
+
+        <span style="color: #73d216;"># </span><span style="color: #73d216;">Turn off the LEDs</span>
+        gpio.output(digouts, gpio.LOW)
+    <span style="color: #b4fa70;">else</span>:
+        <span style="color: #fcaf3e;">result</span> = 0
+    <span style="color: #b4fa70;">return</span> <span style="color: #e9b96e;">'results'</span> <span style="color: #b4fa70;">if</span> result &gt; 0 <span style="color: #b4fa70;">else</span> <span style="color: #e9b96e;">'false_start'</span>
+
+
+<span style="color: #b4fa70;">def</span> <span style="color: #fce94f;">results</span>():
+    <span style="color: #e9b96e;">'''</span>
+<span style="color: #e9b96e;">    Display how good --or bad-- you did</span>
+<span style="color: #e9b96e;">    '''</span>
+    <span style="color: #b4fa70;">global</span> result
+    <span style="color: #b4fa70;">print</span>(<span style="color: #e9b96e;">'Your reflex time was: %s seconds!'</span>%(result))
+    <span style="color: #b4fa70;">return</span> <span style="color: #e9b96e;">'standby'</span>
+
+
+<span style="color: #b4fa70;">def</span> <span style="color: #fce94f;">false_start</span>():
+    <span style="color: #e9b96e;">'''</span>
+<span style="color: #e9b96e;">    Sometimes we jump the gun</span>
+<span style="color: #e9b96e;">    '''</span>
+
+    <span style="color: #73d216;"># </span><span style="color: #73d216;">Add more retorts to let people know that, just because we all have false starts, it isn't right and you should be ashamed</span>
+    <span style="color: #fcaf3e;">retorts</span> = [<span style="color: #e9b96e;">'Sometimes it is better to take too long than to be too early'</span>, \
+               <span style="color: #e9b96e;">'You lose! Black and white, clear as crystal. Good day, sir'</span>, \
+               <span style="color: #e9b96e;">'False start, buddy'</span>]
+    <span style="color: #fcaf3e;">retort</span> = retorts[randint(0, <span style="color: #e090d7;">len</span>(retorts)) - 1]
+    <span style="color: #b4fa70;">print</span>(retort)
+    <span style="color: #b4fa70;">return</span> <span style="color: #e9b96e;">'standby'</span>
+
+
+<span style="color: #73d216;"># </span><span style="color: #73d216;">Hold all of the states so it is easy to keep track of what to be doing</span>
+<span style="color: #fcaf3e;">STATES</span> = { \
+    <span style="color: #e9b96e;">'standby'</span>:standby, \
+    <span style="color: #e9b96e;">'game'</span>   :game,    \
+    <span style="color: #e9b96e;">'results'</span>:results, \
+    <span style="color: #e9b96e;">'false_start'</span>:false_start \
+    }
+
+<span style="color: #73d216;"># </span><span style="color: #73d216;">This try-finally block is important to free up the gpio pins for other processes in the future</span>
+<span style="color: #b4fa70;">try</span>:
+    gpio.setmode(gpio.BCM)
+    <span style="color: #b4fa70;">for</span> i <span style="color: #b4fa70;">in</span> digins:
+        gpio.setup(i, gpio.IN, pull_up_down=gpio.PUD_UP)
+
+    <span style="color: #b4fa70;">for</span> i <span style="color: #b4fa70;">in</span> digouts:
+        gpio.setup(i, gpio.OUT, initial=gpio.LOW)
+
+    <span style="color: #73d216;"># </span><span style="color: #73d216;">Each state returns which state to enter next</span>
+    <span style="color: #fcaf3e;">next_state</span> = <span style="color: #e9b96e;">'standby'</span>
+
+    <span style="color: #73d216;"># </span><span style="color: #73d216;">Loop forever, use ctrl+c to exit</span>
+    <span style="color: #b4fa70;">while</span> <span style="color: #e9b2e3;">True</span>:
+        <span style="color: #fcaf3e;">next_state</span> = STATES[next_state]()
+        sleep(0.02)
+
+<span style="color: #b4fa70;">finally</span>:
+    gpio.cleanup()
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-08-25 Sat 18:03</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
